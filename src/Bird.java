@@ -36,6 +36,8 @@ class BirdFactory {
             return new Bird(birdName, "Quack Quack", true,true);
         } else if ("Chicken".equalsIgnoreCase(birdName)){
             return new Bird(birdName, "Cluck Cluck", false,false);
+        }else if ("Rooster".equalsIgnoreCase(birdName)){
+            return new Bird(birdName, "Cook-a-doodle-doo", false,false);
         }
         return null;
     }

@@ -12,5 +12,11 @@ public class Solution {
         System.out.println(chicken.fly());
         System.out.println(chicken.sing());
         System.out.println(chicken.swim());
+        System.out.println("--------------------------");
+        Bird rooster = BirdFactory.getBird("Rooster");
+        System.out.println(rooster.walk());
+        System.out.println(rooster.fly());
+        System.out.println(rooster.sing());
+        System.out.println(rooster.swim());
        }
 }
