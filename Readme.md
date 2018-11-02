@@ -1,10 +1,12 @@
 # singtelCodeAssignment
-Repository containing code assignment for Java developer
+Code assignment for java developers
 
-Problem A.1
-1.	In the given code though the sing method is been called it was never defined. Defined sing() method in Bird class.
-2. To make the code maintainable we can split the class as follows:
- 1. Animal.java
- 2. Bird.java
- 3. Solution.java
- 
+# Readme.md for the solutions of assignment given
+
+Problem A.1 - Similar to the fly() method we can define the sing() method in Bird class
+1.b - To optimize the code for maintainability we can take out the Animal and Bird class from the main Solution.java and create separate files for these.
+Source folder would look like
+
+Solution.java
+Animal.java
+Bird.java
