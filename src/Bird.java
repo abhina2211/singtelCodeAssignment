@@ -1,7 +1,8 @@
 class Bird extends Animal {
     private String song;
-    private Boolean canSwim;
-    private Boolean canFly;
+    private boolean canSwim;
+    private boolean canFly;
+    private String neighbors;
 
     Bird(String birdName){
         super(birdName);
@@ -15,8 +16,17 @@ class Bird extends Animal {
         this.canSwim = canSwim == null ? false : canSwim;
         this.canFly = canFly == null ? false : canFly;
     }
+    Bird(String birdName, String song, Boolean canSwim,Boolean canFly,String neighbors){
+        this(birdName,song,canSwim,canFly);
+        this.neighbors = neighbors;
+    }
+    Boolean hasneighbors(){
+        return neighbors == null? false:true;
+    }
     String sing() {
-        return String.format("%s says: %s", getAnimalName(),song);
+        return song == null ? String.format("%s can't sing.", getAnimalName())
+                :hasneighbors() ? String.format("%s living with %s says: %s", getAnimalName(),neighbors, song)
+                : String.format("%s says: %s", getAnimalName(),song);
     }
     String swim() {
         return canSwim ? String.format("%s can swim.", getAnimalName()) : String.format("%s can't swim.", getAnimalName());
@@ -38,6 +48,26 @@ class BirdFactory {
             return new Bird(birdName, "Cluck Cluck", false,false);
         }else if ("Rooster".equalsIgnoreCase(birdName)){
             return new Bird(birdName, "Cook-a-doodle-doo", false,false);
+        }
+        return null;
+    }
+    public static Bird getBirdWithneighbors(String birdName, String neighbors){
+        if (birdName == null){
+            return null;
+        }
+        if (birdName != null && neighbors == null){
+            return getBird(birdName);
+        }
+        if ("Parrot".equalsIgnoreCase(birdName)){
+            String says= "";
+            if ("Dogs".equalsIgnoreCase(neighbors)){
+                return new Bird(birdName,"Woof-Woof",false,true,neighbors);
+            } else if ("Cats".equalsIgnoreCase(neighbors)){
+                return new Bird(birdName,"Meow",false,true,neighbors);
+            }else if ("Rooster".equalsIgnoreCase(neighbors)){
+                return new Bird(birdName,"Cook-a-doodle-do",false,true,neighbors);
+            }
+            return new Bird(birdName, says);
         }
         return null;
     }

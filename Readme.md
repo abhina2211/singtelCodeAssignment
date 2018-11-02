@@ -17,4 +17,11 @@ Problem A.3 - implementing the Rooster
 
 1. to implement the Rooster we have modified the getBird method in BirdFactory class to check if the bird name is passed as Rooster we will override the song method to say Cook-a-doodle-doo.
 	Another change would be instantiate an object of the Bird class with birdName as Rooster.
+	
+Problem A.4 - implementing a parrot with varying speaking behavior depending on the neighbor
+
+1. Created a constructor of class Bird to handle bird with neighbor.
+2. Created a getBirdWithneighbor method to handle parrot speaking and other behavior depending on its neighbor.
+
+
 
