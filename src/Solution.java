@@ -36,5 +36,20 @@ public class Solution {
         System.out.println(parrotWithRooster.fly());
         System.out.println(parrotWithRooster.sing());
         System.out.println(parrotWithRooster.swim());
-       }
+        System.out.println("--------------------------");
+        Fish shark = FishFactory.getFish("Shark");
+        System.out.println(shark.specialize());
+        System.out.println(shark.color());
+        System.out.println(shark.size());
+        System.out.println(shark.swim());
+        System.out.println("--------------------------");
+        Fish clownFish = FishFactory.getFish("ClownFish");
+        System.out.println(clownFish.specialize());
+        System.out.println(clownFish.color());
+        System.out.println(clownFish.size());
+        System.out.println(clownFish.swim());
+        System.out.println("--------------------------");
+        Fish dolphin = FishFactory.getFish("Dolphin");
+        System.out.println(dolphin.swim());
+    }
 }

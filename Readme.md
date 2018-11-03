@@ -24,4 +24,11 @@ Problem A.4 - implementing a parrot with varying speaking behavior depending on 
 2. Created a getBirdWithneighbor method to handle parrot speaking and other behavior depending on its neighbor.
 
 
+Problem B
+Implemented Fish similar to Bird. Created a Fish factory and constructors of Fish class.
+Methods of the Fish class -
+canSwim()
+color()
+specialize()
+size()
 
