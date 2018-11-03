@@ -20,6 +20,10 @@ class Bird extends Animal {
         this(birdName,song,canSwim,canFly);
         this.neighbors = neighbors;
     }
+    Bird(String birdName, Boolean canFly){
+        this(birdName);
+        this.canFly = canFly == null ? false : canFly;
+    }
     Boolean hasneighbors(){
         return neighbors == null? false:true;
     }
@@ -48,6 +52,12 @@ class BirdFactory {
             return new Bird(birdName, "Cluck Cluck", false,false);
         }else if ("Rooster".equalsIgnoreCase(birdName)){
             return new Bird(birdName, "Cook-a-doodle-doo", false,false);
+        }
+        else if ("Caterpillar".equalsIgnoreCase(birdName)){
+            return new Bird(birdName, false);
+        }
+        else if ("Butterfly".equalsIgnoreCase(birdName)){
+            return new Bird(birdName, true);
         }
         return null;
     }

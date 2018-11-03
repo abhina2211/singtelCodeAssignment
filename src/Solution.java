@@ -51,5 +51,12 @@ public class Solution {
         System.out.println("--------------------------");
         Fish dolphin = FishFactory.getFish("Dolphin");
         System.out.println(dolphin.swim());
+        System.out.println("--------------------------");
+        Bird caterpillar = BirdFactory.getBird("Caterpillar");
+        System.out.println(caterpillar.walk());
+        System.out.println(caterpillar.fly());
+        System.out.println("--------------------------");
+        Bird butterfly= BirdFactory.getBird("Butterfly");
+        System.out.println(butterfly.fly());
     }
 }
